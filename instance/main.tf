@@ -32,7 +32,7 @@ resource "google_compute_instance" "vm_instance" {
 
   # Add SSH access to the Compute Engine instance
   metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/jme418-ssh-key")}"
+    ssh-keys = "ubuntu:${file("~/.ssh/jme418-ssh-key.pub")}"
   }
 
   # Startup script
