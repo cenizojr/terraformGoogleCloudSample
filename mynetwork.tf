@@ -57,7 +57,7 @@ resource "null_resource" "provision-jenkins-vm" {
       host        = module.jenkins-vm.instance_ip_addr
       type        = "ssh"
       user        = "ubuntu"
-      private_key = file("~/.ssh/id_rsa")
+      private_key = file("~/.ssh/jme418-ssh-key")
     }
 
     ## Script inicialización jenkins-vm
@@ -100,7 +100,7 @@ resource "null_resource" "provision-deploy-vm" {
       host        = module.web-deploy-vm.instance_ip_addr
       type        = "ssh"
       user        = "ubuntu"
-      private_key = file("~/.ssh/id_rsa")
+      private_key = file("~/.ssh/jme418-ssh-key")
     }
 
     ## Script inicialización web-deploy-vm
